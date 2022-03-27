@@ -10,6 +10,7 @@ const mailgun = require("mailgun-js")({ apiKey: API_KEY, domain: DOMAIN });
 router.post(`/mail/contact`, async (req, res) => {
   console.log("Using Route : /mail/contact");
   const { email, subject, name, text } = req.fields;
+  console.log(subject);
 
   if (
     email !== undefined &&
